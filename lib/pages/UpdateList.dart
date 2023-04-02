@@ -63,7 +63,7 @@ class AnimalListPage extends StatelessWidget {
                         builder: (context) => UpdateAnimalScreen(animalId: doc.id),
                       ),
                     );
-                  } else if (choice == 'Editar') {
+                  } else if (choice == 'Eliminar') {
                     await FirebaseFirestore.instance.collection('avesdgo').doc(doc.id).delete();
                     String url= doc['foto'];
                     http.Response response = await http.get(Uri.parse(url));

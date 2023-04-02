@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:avesdgobd/pages/listadatos.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -179,6 +180,15 @@ class _ProfilePageState extends State<ProfilePage> {
                             }));
                       },
                       child: const Text('Formulario'),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                              return ListaDatos();
+                            }));
+                      },
+                      child: const Text('Lista de aves'),
                     ),
                   ],
                 ),
